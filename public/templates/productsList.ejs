@@ -1,0 +1,26 @@
+<div class="products-list-wrapper">
+    <% if (products.length <= 0) { %>
+    <tr>
+        <td colspan="3">No hay productos</td>
+    </tr>
+    <% } else { %>
+        <table class="products-list">
+            <thead>
+            <tr>
+                <th class="tg-0lax">Titulo</th>
+                <th class="tg-0lax">Precio</th>
+                <th class="tg-0lax">Url</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(function(product) { %>
+                    <tr>
+                        <td><%= product.title %></td>
+                        <td><%= product.price %></td>
+                        <td><img class="product-image" src=<%= product.image %> /></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } %>
+</div>

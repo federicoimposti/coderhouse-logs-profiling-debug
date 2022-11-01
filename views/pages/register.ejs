@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+        <title>Coderhouse Backend - Auth</title>
+    </head>
+    <body>
+        <div class="container">
+            <form class="login-form" action="/register" method="POST">
+                <input type="text" name="username" id="username" placeholder="Username" required>                    
+                <input type="text" name="email" id="email" placeholder="Email" required>    
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="submit" value="Registro">             
+            </form>
+            <a href="/login">Login</a>  
+        </div>
+    </body>
+</html>
